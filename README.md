@@ -1,16 +1,24 @@
-# React + Vite
+# To-Do List – React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive **To-Do List** built using React.js. I created this project to practice React fundamentals and understand how state and user interactions work.
 
-Currently, two official plugins are available:
+### Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Add new tasks
+* Mark tasks as completed
+* Rename existing tasks
+* Delete tasks
+* Prevents empty tasks from being added
+* Responsive design for different screen sizes
 
-## React Compiler
+### Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* **React.js** – For building the UI and managing state
+* **JavaScript** – For task logic and interactions
+* **CSS** – For responsive styling, gradients, buttons, and layout
 
-## Expanding the ESLint configuration
+### React Concepts Practiced
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project helped me practice the `useState` hook, event handling with `onClick` and `onChange`, array methods like `map()` and `filter()`, and the spread operator.
+
+This project was built as part of my learning journey to strengthen my understanding of React and frontend development.

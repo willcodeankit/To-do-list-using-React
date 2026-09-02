@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  background: linear-gradient(
+    135deg,
+    #555555,
+    #8a8a8a,
+    #d3d3d3
+  );
+}
+
+.container {
+  width: min(800px, 90%);
+  padding: 40px;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+
+  font-size: clamp(2rem, 5vw, 3rem);
+
+  margin-bottom: 30px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+input {
+  flex: 1;
+  height: 50px;
+  padding: 12px 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.input-section button {
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  color: white;
+
+  font-weight: bold;
+
+  background: linear-gradient(
+    135deg,
+    #444444,
+    #777777
+  );
+
+  transition: 0.2s;
+}
+
+.input-section button:hover {
+  transform: translateY(-2px);
+}
+
+.task-list {
+  margin-top: 25px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px;
+
+  margin-bottom: 10px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 10px;
+}
+
+.task span {
+  cursor: pointer;
+
+  font-size: 17px;
+
+  color: #333;
+
+  word-break: break-word;
+}
+
+.task span.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.task button {
+  margin-left: 15px;
+
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  color: white;
+
+  background: #555;
+
+  transition: 0.2s;
+}
+
+.task button:hover {
+  background: #333;
+}
+
+
+@media (max-width: 500px) {
+  .input-section {
+    flex-direction: column;
+  }
+
+  .input-section button {
+    width: 100%;
+  }
+
+  .task {
+    gap: 10px;
+  }
+}

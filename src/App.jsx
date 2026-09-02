@@ -26,6 +26,20 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   }
 
+  function renameTask(id) {
+  const newName = prompt("Enter the new task name:");
+
+  if (newName && newName.trim() !== "") {
+    setTasks(
+      tasks.map((task) =>
+        task.id === id
+          ? { ...task, text: newName.trim() }
+          : task
+      )
+    );
+  }
+}
+
 
   function completeTask(id) {
     setTasks(
@@ -62,9 +76,15 @@ function App() {
               {task.text}
             </span>
 
-            <button onClick={() => deleteTask(task.id)}>
-              Delete
-            </button>
+            <div className="task-buttons">
+  <button onClick={() => renameTask(task.id)}>
+    Rename
+  </button>
+
+  <button onClick={() => deleteTask(task.id)}>
+    Delete
+  </button>
+</div>
           </div>
         ))}
       </div>

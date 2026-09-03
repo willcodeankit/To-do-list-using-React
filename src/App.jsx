@@ -61,11 +61,15 @@ function App() {
           type="text"
           placeholder="Enter a task..."
           value={task}
-          onChange={(e) => setTask(e.target.value)}
+          onChange={(e) => {
+            setTask(e.target.value)
+              setfieldemp("")
+          }
+        }
         />
 
         <button onClick={addTask}>Add Task</button>
-        
+
         {fieldemp && <p className="fieldemp">{fieldemp}</p>}
       </div>
 

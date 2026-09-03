@@ -26,7 +26,7 @@ function App() {
   }
 
   function deleteTask(id) {
-    setTasks(tasks.filter((task) => task.id !== id));
+  setTasks(tasks.filter((task) => task.id !== id));
   }
 
   function renameTask(id) {
@@ -41,7 +41,6 @@ function App() {
       ))
   }
 }
-
 
   function completeTask(id) {
     setTasks(

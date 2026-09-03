@@ -78,7 +78,7 @@ function App() {
 
             <div className="task-buttons">
   <button onClick={() => renameTask(task.id)}>
-    Rename
+    Update
   </button>
 
   <button onClick={() => deleteTask(task.id)}>

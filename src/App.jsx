@@ -6,17 +6,20 @@ import './App.css'
 function App() {
   const [task, setTask] = useState("");
   const [tasks, setTasks] = useState([]);
+  const [fieldemp, setfieldemp] = useState("")
 
   function addTask() {
     if (task.trim() === "") {
+      setfieldemp("*Field cannot be Empty*")
       return;
     }
+    setfieldemp("")
 
     const newTask = {
       id: Date.now(),
       text: task,
       completed: false,
-    };
+    }
 
     setTasks([...tasks, newTask]);
     setTask("");
@@ -35,8 +38,7 @@ function App() {
         task.id === id
           ? { ...task, text: newName.trim() }
           : task
-      )
-    );
+      ))
   }
 }
 
@@ -47,13 +49,12 @@ function App() {
         task.id === id
           ? { ...task, completed: !task.completed }
           : task
-      )
-    );
+      ))
   }
 
   return (
     <div className="container">
-      <h1>My To-Do List</h1>
+      <h1>To-Do List</h1>
 
       <div className="input-section">
         <input
@@ -64,15 +65,14 @@ function App() {
         />
 
         <button onClick={addTask}>Add Task</button>
+        
+        {fieldemp && <p className="fieldemp">{fieldemp}</p>}
       </div>
 
       <div className="task-list">
         {tasks.map((task) => (
           <div className="task" key={task.id}>
-            <span
-              className={task.completed ? "completed" : ""}
-              onClick={() => completeTask(task.id)}
-            >
+            <span className={task.completed ? "completed" : ""} onClick={() => completeTask(task.id)}>
               {task.text}
             </span>
 
